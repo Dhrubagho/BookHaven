@@ -1617,25 +1617,28 @@
                 }
 
                 // Create WhatsApp message
-                const whatsappMessage = `Hello Book Haven! I want to order:\n\n` +
-                    `📚 Book: ${formData.book}\n` +
-                    `💰 Price: ₹${formData.price}\n\n` +
-                    `👤 Customer Details:\n` +
-                    `Name: ${formData.name}\n` +
-                    `Phone: ${formData.phone}\n` +
-                    `School: ${formData.school}\n` +
-                    `Class: ${formData.class}\n` +
-                    `Address: ${formData.address}\n\n` +
-                    `Please confirm my order and provide payment details.`;
+                // Ensure the phone number starts with the country code (e.g., 91 for India)
+const phoneNumber = "916000940971"; 
 
-                // Encode message for URL
-                const encodedMessage = encodeURIComponent(whatsappMessage);
-                
-                // Create WhatsApp URL
-                const whatsappURL = `https://wa.me/6000940971?text=${encodedMessage}`;
-                
-                // Open WhatsApp in new tab
-                window.open(whatsappURL, '_blank');
+const whatsappMessage = `Hello Book Haven! I want to order:
+
+📚 Book: ${formData.book || 'Not specified'}
+💰 Price: ₹${formData.price || '0'}
+
+👤 Customer Details:
+Name: ${formData.name}
+Phone: ${formData.phone}
+School: ${formData.school}
+Class: ${formData.class}
+Address: ${formData.address}
+
+Please confirm my order and provide payment details.`;
+
+const encodedMessage = encodeURIComponent(whatsappMessage);
+const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+// To trigger it:
+window.open(whatsappURL, '_blank');
                 
                 // Show success message
                 successMessage.style.display = 'block';
@@ -1660,5 +1663,6 @@
 </body>
 
 </html>
+
 
 
