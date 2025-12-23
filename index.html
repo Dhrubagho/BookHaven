@@ -1226,404 +1226,195 @@
 
     <script>
         // Book data with detailed information
-        const bookData = {
-            "english-guide": {
-                title: "Mini English Model",
-                subject: "English",
-                price: "₹110",
-                description: "This comprehensive English guide is designed specifically for Class 10 students, covering all aspects of the curriculum. It includes detailed grammar explanations, writing techniques, literature analysis, and extensive practice questions to help students excel in their exams.",
-                features: [
-                    "Complete grammar coverage with examples",
-                    "Writing skills for essays, letters, and stories",
-                    "Chapter-wise literature analysis",
-                    "Solved and practice questions",
-                    "Previous year question papers",
-                    "Tips for exam preparation"
-                ],
-                specs: {
-                    "Pages": "352 pages",
-                    "Edition": "For Class-X Examinees-2026",
-                    "Language": "English",
-                  
-                },
-                images: [
-                    "english1.jpg",
-                    "english2.jpg",
-                    "english3.jpg",
-                    "english4.jpg"
-                ]
-            },
-            "math-guide": {
-                title: "Mini Mathematics Model",
-                subject: "Mathematics",
-                price: "₹110",
-                description: "A comprehensive mathematics guide that breaks down complex concepts into easy-to-understand steps. Perfect for Class 10 students preparing for board exams with step-by-step solutions and extensive practice problems.",
-                features: [
-                    "Step-by-step problem solving",
-                    "Chapter-wise practice questions",
-                    "Important formulas and theorems",
-                    "Solved examples and exercises",
-                    "Previous year question papers",
-                    "Shortcut methods and tricks"
-                ],
-                specs: {
-                    "Pages": "382 pages",
-                    "Edition": "For Class-X Examinees-2026",
-                    "Language": "Assamese",
-                
-                },
-                images: [
-                    "math1.jpg",
-                    "math2.jpg",
-                    "math3.jpg",
-                    "math4.jpg"
-                ]
-            },
-            "science-guide": {
-                title: "Mini Science Model",
-                subject: "Science",
-                price: "₹110",
-                description: "This all-in-one science guide covers Physics, Chemistry, and Biology with detailed explanations, diagrams, experiments, and important questions. Perfect for Class 10 students aiming for top scores.",
-                features: [
-                    "Physics, Chemistry & Biology coverage",
-                    "Detailed diagrams and illustrations",
-                    "Experiment explanations",
-                    "Important questions with answers",
-                    "NCERT solutions",
-                    "Practice worksheets"
-                ],
-                specs: {
-                    "Pages": "359 pages",
-                    "Edition": "For Class-X Examinees-2026",
-                    "Language": "Assamese",
-                },
-                images: [
-                    "Science1.jpg",
-                    "Science2.jpg",
-                    "Science3.jpg",
-                    "Science4.jpg"
-                ]
-            },
-            "social-science-guide": {
-                title: "Mini Social Science Model",
-                subject: "Social Science",
-                price: "₹110",
-                description: "Master Social Science with this comprehensive guide covering History, Geography, Civics, and Economics. Includes maps, timelines, and practice questions for complete exam preparation.",
-                features: [
-                    "History, Geography, Civics & Economics",
-                    "Maps and timelines",
-                    "Important dates and events",
-                    "Chapter-wise summaries",
-                    "Practice questions with answers",
-                    "Previous year papers"
-                ],
-                specs: {
-                    "Pages": "337 pages",
-                    "Edition": "For Class-X Examinees-2026",
-                    "Language": "Assamese",
-                },
-                images: [
-                    "Social1Science.jpg",
-                    "SocialScience2.jpg",
-                    "SocialScience3.jpg",
-                    "SocialScience4.jpg"
-                ]
-            },
-            "sanskrit-guide": {
-                title: "Sanskrit Simplified Guide",
-                subject: "Sanskrit",
-                author: "Book Haven Publications",
-                price: "₹110",
-                description: "This guide makes learning Sanskrit easy with clear grammar explanations, vocabulary building, translation exercises, and chapter-wise explanations tailored for Class 10 students.",
-                features: [
-                    "Grammar rules with examples",
-                    "Vocabulary building exercises",
-                    "Translation practice",
-                    "Chapter-wise explanations",
-                    "Solved exercises",
-                    "Practice worksheets"
-                ],
-                specs: {
-                    "Pages": "280 pages",
-                    "Edition": "For Class-X Examinees-2026",
-                    "Language": "Sanskrit & English",
-                },
-                images: [
-                    "https://via.placeholder.com/300x400/BD10E0/FFFFFF?text=Sanskrit+Guide+Cover",
-                    "https://via.placeholder.com/300x400/A569BD/FFFFFF?text=Sample+Pages",
-                    "https://via.placeholder.com/300x400/9B59B6/FFFFFF?text=Content+Preview",
-                    "https://via.placeholder.com/300x400/8E44AD/FFFFFF?text=Author+Info"
-                ]
-            },
-            "assamese-guide": {
-                title: "Mini Assamese Model",
-                subject: "Assamese",
-                author: "Book Haven Publications",
-                price: "₹110",
-                description: "A complete guide for Assamese language covering grammar, literature, writing skills, and practice questions specifically designed for Class 10 students in Assam.",
-                features: [
-                    "Complete grammar coverage",
-                    "Literature analysis",
-                    "Writing skills development",
-                    "Practice questions",
-                    "Previous year papers",
-                    "Regional context examples"
-                ],
-                specs: {
-                    "Pages": "348 pages",
-                   "Edition": "For Class-X Examinees-2026",
-                    "Language": "Assamese",
-                },
-                images: [
-                    "Assamese1.jpg",
-                    "Assamese2.jpg",
-                    "Assamese3.jpg",
-                    "Assamese4.jpg"
-                ]
-            }
+const bookData = {
+    "english-guide": {
+        title: "Mini English Model",
+        subject: "English",
+        price: "110", // Kept as number/string without symbol for easier logic
+        description: "This comprehensive English guide is designed specifically for Class 10 students, covering all aspects of the curriculum.",
+        features: ["Complete grammar coverage", "Writing skills", "Chapter-wise analysis", "Solved questions", "Previous papers", "Exam tips"],
+        specs: { "Pages": "352 pages", "Edition": "2026", "Language": "English" },
+        images: ["english1.jpg", "english2.jpg", "english3.jpg", "english4.jpg"]
+    },
+    "math-guide": {
+        title: "Mini Mathematics Model",
+        subject: "Mathematics",
+        price: "110",
+        description: "A comprehensive mathematics guide that breaks down complex concepts into easy-to-understand steps.",
+        features: ["Step-by-step solving", "Practice questions", "Formulas & theorems", "Solved examples", "Previous papers", "Shortcut tricks"],
+        specs: { "Pages": "382 pages", "Edition": "2026", "Language": "Assamese" },
+        images: ["math1.jpg", "math2.jpg", "math3.jpg", "math4.jpg"]
+    },
+    "science-guide": {
+        title: "Mini Science Model",
+        subject: "Science",
+        price: "110",
+        description: "Covers Physics, Chemistry, and Biology with detailed explanations, diagrams, and experiments.",
+        features: ["PCB coverage", "Detailed diagrams", "Experiment guides", "Important Q&A", "NCERT solutions", "Worksheets"],
+        specs: { "Pages": "359 pages", "Edition": "2026", "Language": "Assamese" },
+        images: ["Science1.jpg", "Science2.jpg", "Science3.jpg", "Science4.jpg"]
+    },
+    "social-science-guide": {
+        title: "Mini Social Science Model",
+        subject: "Social Science",
+        price: "110",
+        description: "Master Social Science with History, Geography, Civics, and Economics coverage.",
+        features: ["Full Subject Coverage", "Maps & Timelines", "Important Dates", "Chapter Summaries", "Practice Q&A", "Previous Papers"],
+        specs: { "Pages": "337 pages", "Edition": "2026", "Language": "Assamese" },
+        images: ["Social1Science.jpg", "SocialScience2.jpg", "SocialScience3.jpg", "SocialScience4.jpg"]
+    },
+    "sanskrit-guide": {
+        title: "Sanskrit Simplified Guide",
+        subject: "Sanskrit",
+        price: "110",
+        description: "Makes learning Sanskrit easy with grammar explanations and vocabulary building.",
+        features: ["Grammar rules", "Vocabulary", "Translation practice", "Chapter explanations", "Solved exercises", "Worksheets"],
+        specs: { "Pages": "280 pages", "Edition": "2026", "Language": "Sanskrit & English" },
+        images: ["https://via.placeholder.com/300x400?text=Sanskrit+1", "https://via.placeholder.com/300x400?text=Sanskrit+2"]
+    },
+    "assamese-guide": {
+        title: "Mini Assamese Model",
+        subject: "Assamese",
+        price: "110",
+        description: "A complete guide for Assamese language covering grammar and literature.",
+        features: ["Grammar coverage", "Literature analysis", "Writing skills", "Practice questions", "Previous papers", "Regional context"],
+        specs: { "Pages": "348 pages", "Edition": "2026", "Language": "Assamese" },
+        images: ["Assamese1.jpg", "Assamese2.jpg", "Assamese3.jpg", "Assamese4.jpg"]
+    }
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Selectors
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    const closeMenu = document.querySelector('.close-menu');
+    const bookModal = document.getElementById('book-detail-modal');
+    const closeBookModal = document.querySelector('.close-book-modal');
+    const bookCards = document.querySelectorAll('.book-card');
+    const bookDetailContainer = document.getElementById('book-detail-container');
+    const registrationModal = document.getElementById('registration-modal');
+    const closeModal = document.querySelector('.close-modal');
+    const summaryBookName = document.getElementById('summary-book-name');
+    const summaryBookPrice = document.getElementById('summary-book-price');
+    const registrationForm = document.getElementById('registration-form');
+    const successMessage = document.getElementById('success-message');
+    const orderSummary = document.getElementById('order-summary');
+
+    let currentBook = '';
+    let currentPrice = '';
+
+    // --- Navigation Logic ---
+    hamburger.addEventListener('click', () => nav.classList.add('active'));
+    closeMenu.addEventListener('click', () => nav.classList.remove('active'));
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', () => nav.classList.remove('active'));
+    });
+
+    // --- Book Detail Logic ---
+    bookCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            if (e.target.closest('.buy-btn')) return;
+            const bookId = this.getAttribute('data-book-id');
+            openBookDetailModal(bookId);
+        });
+    });
+
+    function openBookDetailModal(bookId) {
+        const book = bookData[bookId];
+        if (!book) return;
+
+        let imagesHTML = book.images.map((img, i) => `
+            <img src="${img}" alt="${book.title}" class="book-thumbnail ${i === 0 ? 'active' : ''}" data-index="${i}">
+        `).join('');
+
+        let featuresHTML = book.features.map(f => `<li><i class="fas fa-check"></i> ${f}</li>`).join('');
+        
+        let specsHTML = Object.entries(book.specs).map(([key, value]) => `
+            <div class="spec-item"><span class="spec-label">${key}</span><span class="spec-value">${value}</span></div>
+        `).join('');
+
+        bookDetailContainer.innerHTML = `
+            <div class="book-detail-images">
+                <img src="${book.images[0]}" alt="${book.title}" class="book-main-image" id="book-main-image">
+                <div class="book-thumbnails">${imagesHTML}</div>
+            </div>
+            <div class="book-detail-info">
+                <h2 class="book-detail-title">${book.title}</h2>
+                <p class="book-detail-subject">${book.subject}</p>
+                <p class="book-detail-price">₹${book.price}</p>
+                <p class="book-detail-description">${book.description}</p>
+                <div class="book-features"><h4>Key Features</h4><ul>${featuresHTML}</ul></div>
+                <div class="book-specs">${specsHTML}</div>
+                <button class="book-detail-buy-btn" data-book="${book.title}" data-price="${book.price}">
+                    <i class="fas fa-shopping-cart"></i> Buy Now
+                </button>
+            </div>
+        `;
+
+        bookModal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+
+        // Internal modal listeners
+        bookDetailContainer.querySelectorAll('.book-thumbnail').forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                bookDetailContainer.querySelector('#book-main-image').src = this.src;
+                bookDetailContainer.querySelectorAll('.book-thumbnail').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        bookDetailContainer.querySelector('.book-detail-buy-btn').addEventListener('click', function() {
+            closeBookDetailModal();
+            openRegistrationModal(this.dataset.book, this.dataset.price);
+        });
+    }
+
+    function closeBookDetailModal() {
+        bookModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // --- Registration & WhatsApp Logic ---
+    function openRegistrationModal(title, price) {
+        currentBook = title;
+        currentPrice = price.replace('₹', ''); // Ensure no symbol is stored in the variable
+        
+        summaryBookName.textContent = title;
+        summaryBookPrice.textContent = '₹' + currentPrice; // One symbol only
+        
+        registrationForm.reset();
+        successMessage.style.display = 'none';
+        orderSummary.style.display = 'block';
+        registrationForm.style.display = 'block';
+        registrationModal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+
+    document.querySelectorAll('.buy-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            openRegistrationModal(btn.dataset.book, btn.dataset.price);
+        });
+    });
+
+    registrationForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = {
+            name: document.getElementById('customer-name').value,
+            phone: document.getElementById('customer-phone').value,
+            address: document.getElementById('customer-address').value,
+            school: document.getElementById('customer-school').value,
+            class: document.getElementById('customer-class').value,
+            book: currentBook,
+            price: currentPrice
         };
 
-        document.addEventListener('DOMContentLoaded', function() {
-            // Mobile menu toggle
-            const hamburger = document.querySelector('.hamburger');
-            const nav = document.querySelector('nav');
-            const closeMenu = document.querySelector('.close-menu');
-            
-            hamburger.addEventListener('click', function() {
-                nav.classList.add('active');
-            });
-            
-            closeMenu.addEventListener('click', function() {
-                nav.classList.remove('active');
-            });
-            
-            // Close menu when clicking on a link
-            const navLinks = document.querySelectorAll('nav ul li a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    nav.classList.remove('active');
-                });
-            });
+        const phoneNumber = "916000940971"; 
+        const whatsappMessage = `Hello Book Haven! I want to order:
 
-            // Book Detail Modal
-            const bookModal = document.getElementById('book-detail-modal');
-            const closeBookModal = document.querySelector('.close-book-modal');
-            const bookCards = document.querySelectorAll('.book-card');
-            const bookDetailContainer = document.getElementById('book-detail-container');
-
-            // Open book detail modal when book card is clicked
-            bookCards.forEach(card => {
-                card.addEventListener('click', function(e) {
-                    // Don't open if buy button was clicked
-                    if (e.target.closest('.buy-btn')) return;
-                    
-                    const bookId = this.getAttribute('data-book-id');
-                    openBookDetailModal(bookId);
-                });
-            });
-
-            // Close book detail modal
-            closeBookModal.addEventListener('click', function() {
-                closeBookDetailModal();
-            });
-
-            // Close book modal when clicking outside
-            window.addEventListener('click', function(e) {
-                if (e.target === bookModal) {
-                    closeBookDetailModal();
-                }
-            });
-
-            // Function to open book detail modal
-            function openBookDetailModal(bookId) {
-                const book = bookData[bookId];
-                if (!book) return;
-
-                // Create HTML for book details
-                let imagesHTML = '';
-                book.images.forEach((img, index) => {
-                    imagesHTML += `
-                        <img src="${img}" alt="${book.title}" class="book-thumbnail ${index === 0 ? 'active' : ''}" data-index="${index}">
-                    `;
-                });
-
-                let featuresHTML = '';
-                book.features.forEach(feature => {
-                    featuresHTML += `
-                        <li><i class="fas fa-check"></i> ${feature}</li>
-                    `;
-                });
-
-                let specsHTML = '';
-                for (const [key, value] of Object.entries(book.specs)) {
-                    specsHTML += `
-                        <div class="spec-item">
-                            <span class="spec-label">${key}</span>
-                            <span class="spec-value">${value}</span>
-                        </div>
-                    `;
-                }
-
-                const bookDetailHTML = `
-                    <div class="book-detail-images">
-                        <img src="${book.images[0]}" alt="${book.title}" class="book-main-image" id="book-main-image">
-                        <div class="book-thumbnails">
-                            ${imagesHTML}
-                        </div>
-                    </div>
-                    <div class="book-detail-info">
-                        <h2 class="book-detail-title">${book.title}</h2>
-                        <p class="book-detail-subject">${book.subject}</p>
-                        <p class="book-detail-price">${book.price}</p>
-                        <p class="book-detail-description">${book.description}</p>
-                        
-                        <div class="book-features">
-                            <h4>Key Features</h4>
-                            <ul>
-                                ${featuresHTML}
-                            </ul>
-                        </div>
-                        
-                        <div class="book-specs">
-                            ${specsHTML}
-                        </div>
-                        
-                        <button class="book-detail-buy-btn" data-book="${book.title}" data-price="${book.price.replace('₹', '')}">
-                            <i class="fas fa-shopping-cart"></i> Buy Now
-                        </button>
-                    </div>
-                `;
-
-                bookDetailContainer.innerHTML = bookDetailHTML;
-                bookModal.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-
-                // Add event listeners for thumbnail images
-                const thumbnails = bookDetailContainer.querySelectorAll('.book-thumbnail');
-                const mainImage = bookDetailContainer.querySelector('#book-main-image');
-                
-                thumbnails.forEach(thumb => {
-                    thumb.addEventListener('click', function() {
-                        const index = this.getAttribute('data-index');
-                        mainImage.src = book.images[index];
-                        
-                        // Update active thumbnail
-                        thumbnails.forEach(t => t.classList.remove('active'));
-                        this.classList.add('active');
-                    });
-                });
-
-                // Add event listener for buy button in book detail
-                const detailBuyBtn = bookDetailContainer.querySelector('.book-detail-buy-btn');
-                detailBuyBtn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    const bookTitle = this.getAttribute('data-book');
-                    const bookPrice = this.getAttribute('data-price');
-                    
-                    closeBookDetailModal();
-                    openRegistrationModal(bookTitle, bookPrice);
-                });
-            }
-
-            // Function to close book detail modal
-            function closeBookDetailModal() {
-                bookModal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-
-            // Registration Modal
-            const registrationModal = document.getElementById('registration-modal');
-            const closeModal = document.querySelector('.close-modal');
-            const buyButtons = document.querySelectorAll('.buy-btn');
-            const summaryBookName = document.getElementById('summary-book-name');
-            const summaryBookPrice = document.getElementById('summary-book-price');
-            const registrationForm = document.getElementById('registration-form');
-            const successMessage = document.getElementById('success-message');
-            const orderSummary = document.getElementById('order-summary');
-
-            let currentBook = '';
-            let currentPrice = '';
-
-            // Open modal when buy button is clicked
-            buyButtons.forEach(button => {
-                button.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    const bookTitle = this.getAttribute('data-book');
-                    const bookPrice = this.getAttribute('data-price');
-                    
-                    openRegistrationModal(bookTitle, bookPrice);
-                });
-            });
-
-            // Open registration modal function
-            function openRegistrationModal(bookTitle, bookPrice) {
-                currentBook = bookTitle;
-                currentPrice = bookPrice;
-                
-                // Update order summary
-                summaryBookName.textContent = bookTitle;
-                summaryBookPrice.textContent = '₹' + bookPrice;
-                
-                // Reset form and hide success message
-                registrationForm.reset();
-                successMessage.style.display = 'none';
-                orderSummary.style.display = 'block';
-                registrationForm.style.display = 'block';
-                
-                // Show modal
-                registrationModal.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-            }
-
-            // Close modal
-            closeModal.addEventListener('click', function() {
-                closeRegistrationModal();
-            });
-
-            // Close modal when clicking outside
-            window.addEventListener('click', function(e) {
-                if (e.target === registrationModal) {
-                    closeRegistrationModal();
-                }
-            });
-
-            // Close modal function
-            function closeRegistrationModal() {
-                registrationModal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-                successMessage.style.display = 'none';
-                orderSummary.style.display = 'block';
-            }
-
-            // Handle form submission
-            registrationForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Get form data
-                const formData = {
-                    name: document.getElementById('customer-name').value,
-                    phone: document.getElementById('customer-phone').value,
-                    address: document.getElementById('customer-address').value,
-                    school: document.getElementById('customer-school').value,
-                    class: document.getElementById('customer-class').value,
-                    book: currentBook,
-                    price: currentPrice
-                };
-
-                // Validate form
-                if (!formData.name || !formData.phone || !formData.address || !formData.school) {
-                    alert('Please fill in all required fields');
-                    return;
-                }
-
-                // Create WhatsApp message
-                // Ensure the phone number starts with the country code (e.g., 91 for India)
-const phoneNumber = "916000940971"; 
-
-const whatsappMessage = `Hello Book Haven! I want to order:
-
-📚 Book: ${formData.book || 'Not specified'}
-💰 Price: ₹${formData.price || '0'}
+📚 Book: ${formData.book}
+💰 Price: ₹${formData.price}
 
 👤 Customer Details:
 Name: ${formData.name}
@@ -1634,35 +1425,38 @@ Address: ${formData.address}
 
 Please confirm my order and provide payment details.`;
 
-const encodedMessage = encodeURIComponent(whatsappMessage);
-const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+        window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
+        
+        successMessage.style.display = 'block';
+        orderSummary.style.display = 'none';
+        registrationForm.style.display = 'none';
+        
+        setTimeout(() => {
+            registrationModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }, 5000);
+    });
 
-// To trigger it:
-window.open(whatsappURL, '_blank');
-                
-                // Show success message
-                successMessage.style.display = 'block';
-                orderSummary.style.display = 'none';
-                registrationForm.style.display = 'none';
-                
-                // Close modal after 3 seconds
-                setTimeout(function() {
-                    closeRegistrationModal();
-                    registrationForm.style.display = 'block';
-                }, 5000);
-            });
-
-            // Prevent form submission on Enter key
-            registrationForm.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    e.preventDefault();
-                }
-            });
-        });
+    // Close Modals on click outside
+    window.onclick = (e) => {
+        if (e.target === bookModal) closeBookDetailModal();
+        if (e.target === registrationModal) {
+            registrationModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    };
+    
+    closeBookModal.onclick = closeBookDetailModal;
+    closeModal.onclick = () => {
+        registrationModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    };
+});
     </script>
 </body>
 
 </html>
+
 
 
 
